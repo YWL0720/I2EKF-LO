@@ -1,0 +1,42 @@
+common:
+    lid_topic:  "/livox/lidar"
+
+preprocess:
+    lidar_type: 1                # Livox
+    feature_extract_en: false
+    scan_line: 6
+    blind: 1
+    point_filter_num: 3
+
+initialization:
+    cut_frame: false
+    cut_frame_num: 6
+    cut_frame_init_num: 5
+
+mapping:
+    filter_size_surf: 0.3
+    filter_size_map: 0.3
+    gyr_cov: 0.01
+    acc_cov: 0.01
+    det_range: 100.0
+    cov_lidar: 0.001
+    max_iteration: 20
+    max_undistort: 5
+    cube_side_length: 2000
+
+adaptive_cov:
+    use: false
+    K: 100.0
+    a: 50
+    b: 10.0
+
+publish:
+    path_en:  true
+    scan_publish_en:  true
+    dense_publish_en: true
+    scan_bodyframe_pub_en: false
+
+pcd_save:
+    pcd_save_en: false
+    interval: -1
+

@@ -1,0 +1,36 @@
+common:
+    lid_topic:  "/hesai/pandar"
+
+preprocess:
+    lidar_type: 5                # Hesai PandarXT
+    scan_line: 32
+    blind: 3
+    feature_extract_en: false
+    point_filter_num: 2
+
+initialization:
+    cut_frame_num: 4 # must be positive integer
+    orig_odom_freq: 10
+    cut_frame_init_num: 20
+
+mapping:
+    filter_size_surf: 0.05
+    filter_size_map: 0.15
+    gyr_cov: 20
+    acc_cov: 2
+    det_range: 120.0
+    cov_lidar: 0.001
+    max_iteration: 20
+    max_undistort: 3
+    cube_side_length: 2000
+
+publish:
+    path_en:  true
+    scan_publish_en:  true       # false: close all the point cloud output
+    dense_publish_en: true       # false: low down the points number in a global-frame point clouds scan.
+    scan_bodyframe_pub_en: true  # true: output the point cloud scans in IMU-body-frame
+
+pcd_save:
+    pcd_save_en: false
+    interval: -1                 # how many LiDAR frames saved in each pcd file; 
+                                 # -1 : all frames will be saved in ONE pcd file, may lead to memory crash when having too much frames.

@@ -1,0 +1,36 @@
+common:
+    lid_topic:  "/os_cloud_node/points"
+
+preprocess:
+    lidar_type: 3                # Ouster LiDAR
+    scan_line: 128
+    blind: 4
+    feature_extract_en: false
+    point_filter_num: 5
+
+initialization:
+    cut_frame: true
+    cut_frame_num: 3 # must be positive integer
+    cut_frame_init_num: 20
+
+mapping:
+    filter_size_surf: 0.5
+    filter_size_map: 0.5
+    gyr_cov: 0.01
+    acc_cov: 0.01
+    det_range: 150.0
+    cov_lidar: 0.001
+    max_iteration: 20
+    max_undistort: 3
+    cube_side_length: 2000
+
+publish:
+    path_en:  true
+    scan_publish_en:  true       # false: close all the point cloud output
+    dense_publish_en: true       # false: low down the points number in a global-frame point clouds scan.
+    scan_bodyframe_pub_en: true  # true: output the point cloud scans in IMU-body-frame
+
+pcd_save:
+    pcd_save_en: false
+    interval: -1                 # how many LiDAR frames saved in each pcd file; 
+                                 # -1 : all frames will be saved in ONE pcd file, may lead to memory crash when having too much frames.

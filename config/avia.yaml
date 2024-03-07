@@ -1,0 +1,36 @@
+common:
+    lid_topic:  "/livox/lidar"
+
+preprocess:
+    lidar_type: 1               # Livox series LiDAR
+    feature_extract_en: false
+    scan_line: 6
+    blind: 2
+    point_filter_num: 2
+
+initialization:
+    cut_frame: false
+    cut_frame_num: 5           # must be positive integer
+    cut_frame_init_num: 5
+
+mapping:
+    filter_size_surf: 0.05
+    filter_size_map: 0.15
+    gyr_cov: 50
+    acc_cov: 2
+    det_range: 450.0
+    cov_lidar: 0.001
+    max_iteration: 20
+    max_undistort: 7
+    cube_side_length: 2000
+
+publish:
+    path_en:  true
+    scan_publish_en:  true       # false: close all the point cloud output
+    dense_publish_en: true       # false: low down the points number in a global-frame point clouds scan.
+    scan_bodyframe_pub_en: true  # true: output the point cloud scans in IMU-body-frame
+
+pcd_save:
+    pcd_save_en: false
+    interval: -1                 # how many LiDAR frames saved in each pcd file; 
+                                 # -1 : all frames will be saved in ONE pcd file, may lead to memory crash when having too much frames.

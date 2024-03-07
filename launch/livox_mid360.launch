@@ -1,0 +1,16 @@
+<launch>
+<!-- Launch file for Livox AVIA LiDAR -->
+
+	<arg name="rviz" default="true" />
+
+	<rosparam command="load" file="$(find i2ekf_lo)/config/mid360.yaml" />
+
+	<node pkg="i2ekf_lo" type="i2ekf_lo_mapping" name="i2ekf_lo_mapping" output="screen" />
+
+	<group if="$(arg rviz)">
+	<node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find i2ekf_lo)/rviz_cfg/fast_lo.rviz" />
+	</group>
+
+	launch-prefix="gdb -ex run --args"
+
+</launch>
