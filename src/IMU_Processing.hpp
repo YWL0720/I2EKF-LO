@@ -247,6 +247,8 @@ void ImuProcess::Forward_propagation_without_imu(const MeasureGroup &meas, State
     F_x.block<3, 3>(0, 0) = Exp(state_inout.bias_g, -dt);
     F_x.block<3, 3>(0, 15) = Eye3d * dt;
     F_x.block<3, 3>(3, 12) = state_inout.rot_end * dt;
+    F_x.block<3, 3>(3, 0) = -state_inout.rot_end * SKEW_SYM_MATRX(state_inout.vel_end) * Exp(state_inout.bias_g, -dt) * dt;
+    F_x.block<3, 3>(3, 15) = -state_inout.rot_end * SKEW_SYM_MATRX(state_inout.vel_end) * dt;
 
     cov_w.block<3, 3>(15, 15).diagonal() = cov_gyr_scale * dt * dt;
     cov_w.block<3, 3>(12, 12).diagonal() = cov_acc_scale * dt * dt;
