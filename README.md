@@ -2,6 +2,7 @@
     <h1>I2EKF-LO</h1>
     <i>A Dual-Iteration Extended Kalman Filter Based  LiDAR Odometry</i>
     <br>
+    <strong>IROS 2024 Oral</strong>
     <br>
     <img src="image/overview.png" width="80%" height="auto" alt="Pipeline Image">
 <br>
@@ -11,6 +12,10 @@
 LiDAR odometry is a pivotal technology in the fields of autonomous driving and autonomous mobile robotics. However, most of the current works focuse on nonlinear optimization methods, and there are still many challenges in using the traditional Iterative Extended Kalman Filter (IEKF) framework to tackle the problem: IEKF only iterates over the observation equation, relying on a rough estimate of the initial state, which is insufficient to fully eliminate motion distortion in the input point cloud; the system process noise is difficult to be determined during state estimation of the complex motions; and the varying motion models across different sensor carriers. To address these issues, we propose the Dual-Iteration Extended Kalman Filter (I2EKF) and the LiDAR odometry based on I2EKF (I2EKF-LO). This approach not only iterates over the observation equation but also leverages state updates to iteratively mitigate motion distortion in LiDAR point clouds. Moreover, it dynamically adjusts process noise based on the confidence level of prior predictions during state estimation and establishes motion models for different sensor carriers to achieve accurate and efficient state estimation. Comprehensive experiments demonstrate that I2EKF-LO achieves outstanding levels of accuracy and computational efficiency in the realm of LiDAR odometry.
 
 **Developers**: The codes of this repo are contributed by [Wenlu Yu (于文录)](https://github.com/YWL0720), [Jie Xu (徐杰)](https://github.com/jiejie567), [Chengwei Zhao (赵成伟)](https://github.com/chengwei0427)
+
+### NEWS
+* **[30/06/2024]**: I2EKF-LO is accepted to IROS 2024.
+* **[01/07/2024]**: We are currently working on organizing and refining the complete code. The full version will be released soon.
 
 ### Related Paper
 
