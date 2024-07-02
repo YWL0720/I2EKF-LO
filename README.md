@@ -13,7 +13,7 @@ LiDAR odometry is a pivotal technology in the fields of autonomous driving and a
 
 **Developers**: The codes of this repo are contributed by [Wenlu Yu (于文录)](https://github.com/YWL0720), [Jie Xu (徐杰)](https://github.com/jiejie567), [Chengwei Zhao (赵成伟)](https://github.com/chengwei0427)
 
-### NEWS
+### News
 * **[30/06/2024]**: I2EKF-LO is accepted to IROS 2024.
 * **[01/07/2024]**: We are currently working on organizing and refining the complete code. The full version will be released soon.
 * **[02/07/2024]**: Updated the video link and submitted the paper to arxiv.
