@@ -16,10 +16,11 @@ LiDAR odometry is a pivotal technology in the fields of autonomous driving and a
 ### NEWS
 * **[30/06/2024]**: I2EKF-LO is accepted to IROS 2024.
 * **[01/07/2024]**: We are currently working on organizing and refining the complete code. The full version will be released soon.
+* **[02/07/2024]**: Updated the video link and submitted the paper to arxiv.
 
 ### Related Paper
 
-- TODO
+Related paper available on arxiv: I2EKF-LO: A Dual-Iteration Extended Kalman Filter Based LiDAR Odometry 
 
 ### Related Video:
 
