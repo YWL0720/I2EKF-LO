@@ -23,10 +23,8 @@ LiDAR odometry is a pivotal technology in the fields of autonomous driving and a
 
 ### Related Video:
 
-- TODO
-
 <div align="center">
-    <a href=" " target="_blank"/>
+    <a href="https://youtu.be/jaNavKRnpiE" target="_blank"/>
     <img src="image/video_cover.png" width=70% />
 </div>
 
