@@ -20,7 +20,7 @@ LiDAR odometry is a pivotal technology in the fields of autonomous driving and a
 
 ### Related Paper
 
-Related paper available on arxiv: I2EKF-LO: A Dual-Iteration Extended Kalman Filter Based LiDAR Odometry 
+Related paper available on arxiv: [I2EKF-LO: A Dual-Iteration Extended Kalman Filter Based LiDAR Odometry](https://arxiv.org/abs/2407.02190) 
 
 ### Related Video:
 
