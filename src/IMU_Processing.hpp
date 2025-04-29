@@ -222,6 +222,7 @@ void ImuProcess::Forward_propagation_without_imu(const MeasureGroup &meas, State
         b_first_frame_ = false;
         frame_dt = pcl_out.points.back().curvature / double(1000) - pcl_out.points.front().curvature / double(1000);
         frame_end_time = pcl_out.points.back().curvature;
+        time_last_scan = pcl_beg_time;
     }
     else
     {
